@@ -3,7 +3,6 @@ package com.opencsv.demo;
 import com.opencsv.bean.CsvBindByName;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class Stock {
     private String symbol;

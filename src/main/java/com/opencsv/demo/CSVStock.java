@@ -1,11 +1,15 @@
 package com.opencsv.demo;
 
 import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvDate;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class CSVStock {
+
     @CsvBindByName(column = "Date", required = true)
+    @CsvDate(value = "MM/dd/yyyy HH:mm")
     private LocalDateTime date;
 
     @CsvBindByName(column = "Open")

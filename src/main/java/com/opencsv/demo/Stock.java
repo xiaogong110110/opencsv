@@ -2,32 +2,47 @@ package com.opencsv.demo;
 
 import com.opencsv.bean.CsvBindByName;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class CSVStock {
-    @CsvBindByName(column = "Date", required = true)
-    private LocalDateTime date;
+public class Stock {
+    private String symbol;
 
-    @CsvBindByName(column = "Open")
+    private LocalDate date;
+
     private double open;
 
-    @CsvBindByName(column = "High")
     private double high;
 
-    @CsvBindByName(column = "Low")
     private double low;
 
-    @CsvBindByName(column = "Close")
     private double close;
 
-    @CsvBindByName(column = "Volume")
     private double volume;
 
-    public LocalDateTime getDate() {
+    public Stock(String symbol, LocalDate date, double open, double high, double low, double close, double volume) {
+        this.symbol = symbol;
+        this.date = date;
+        this.open = open;
+        this.high = high;
+        this.low = low;
+        this.close = close;
+        this.volume = volume;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 

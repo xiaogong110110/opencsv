@@ -5,7 +5,7 @@ import com.opencsv.bean.CsvBindByName;
 import java.time.LocalDate;
 
 public class Stock {
-    private String symbol;
+
 
     private LocalDate date;
 
@@ -19,8 +19,19 @@ public class Stock {
 
     private double volume;
 
+    private String symbol;
+
     public Stock(String symbol, LocalDate date, double open, double high, double low, double close, double volume) {
         this.symbol = symbol;
+        this.date = date;
+        this.open = open;
+        this.high = high;
+        this.low = low;
+        this.close = close;
+        this.volume = volume;
+    }
+
+    public Stock(LocalDate date, double open, double high, double low, double close, double volume) {
         this.date = date;
         this.open = open;
         this.high = high;

@@ -16,15 +16,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OpenCSVWriter {
-    private static final String STRING_ARRAY_SAMPLE = "./string-array-sample.csv";
-    private static final String OBJECT_LIST_SAMPLE = "./object-list-sample.csv";
+    private static final String STRING_ARRAY_SAMPLE = "C:\\testcsv\\reader.csv";
+    private static final String OBJECT_LIST_SAMPLE = "C:\\testcsv\\reader.csv";
 
     public static void main(String[] args) throws IOException,
             CsvDataTypeMismatchException,
             CsvRequiredFieldEmptyException {
 
         writeFromArrayOfStrings();
-        writeFromListOfObjects();
+        //writeFromListOfObjects();
     }
 
 
@@ -41,8 +41,8 @@ public class OpenCSVWriter {
             String[] headerRecord = {"Symbol", "Date", "Open", "High", "Low", "Close", "Volume"};
             csvWriter.writeNext(headerRecord);
 
-            csvWriter.writeNext(new String[]{"AAPL", "20 Jan 2020", "318.67", "319.99", "317.31", "317.62", "24939532"});
-            csvWriter.writeNext(new String[]{"AAPL", "21 Jan 2020", "317.19", "319.02", "316.00", "316.55", "26568271"});
+            csvWriter.writeNext(new String[]{"=2656827167867878989089083544655676", "\t 2020-01-01 12:12:12", "318.67", "319.99", "317.31", "317.62", "=24939532354545645768897890"});
+            csvWriter.writeNext(new String[]{"=2656827167867878989089083544655676", "\t 2020-01-01 12:12:12", "317.19", "319.02", "316.00", "316.55", "=2656827167867878989089083544655676"});
         }
     }
 

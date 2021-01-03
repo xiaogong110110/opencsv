@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class CSVStock {
 
     @CsvBindByName(column = "Date", required = true)
-    @CsvDate(value = "MM/dd/yyyy HH:mm")
+    @CsvDate(value = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime date;
 
     @CsvBindByName(column = "Open")
